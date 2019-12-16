@@ -1,7 +1,7 @@
 import psycopg2 as pg
 import pandas as pd
 
-conn = pg.connect("host=localhost dbname=postgres user=postgres password = Infinity!90")
+conn = pg.connect("")
 cur = conn.cursor()
 
 df = pd.read_sql_query("select id, settled_value from questions where type = 'binary' and settled_value is not NULL", conn)
